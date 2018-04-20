@@ -4,11 +4,13 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-    title Perez System
+    title #{title} | Perez Tech Systems
     // Bootstrap core CSS
     link(href='/stylesheets/bootstrap.css', rel='stylesheet')
     // Custom styles for this template
     link(href='/stylesheets/style.css', rel='stylesheet')
+
+
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
   body
 
@@ -24,15 +26,15 @@ html(lang='en')
           a.navbar-brand(href='#') Perez Tech Systems
         #navbar.navbar-collapse.collapse
           ul.nav.navbar-nav
-            li.active
-              a(href='#') Home
-            li
-              a(href='#about') About
-            li
-              a(href='#contact') Contact
+            li(class=(title === 'Home' ? 'active' : ''))
+              a(href='/') Home
+            li(class=(title === 'About' ? 'active' : ''))
+              a(href='/about') About
+            li(class=(title === 'Contact' ? 'active' : ''))
+              a(href='/contact') Contact
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | Dropdown
+                | Products
                 span.caret
               ul.dropdown-menu
                 li
@@ -57,8 +59,17 @@ html(lang='en')
             li
               a(href='../navbar-fixed-top/') Fixed top
         // /.nav-collapse
+
     .container
-    // /container
+
+
+
+
+    block content
+
+    footer
+        p &copy; 2018, All Rights Reserved
+        // /container
     //
       Bootstrap core JavaScript
       ==================================================
