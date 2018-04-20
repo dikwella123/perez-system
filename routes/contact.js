@@ -11,7 +11,7 @@ router.post('/send', function (req, res, next) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'dikwella.perez2@gmail.com',
+            user: 'kato.perezjohn2@gmail.com',
             pass: 'xxxxxxxxxxx'
         }
     });
